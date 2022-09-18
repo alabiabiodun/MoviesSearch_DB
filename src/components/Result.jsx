@@ -32,7 +32,7 @@ const Result = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '2f3d77fad7mshfb518aecd589497p15dcdajsn43e6f13640e6',
+        'X-RapidAPI-Key': 'Supply your own key',
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };
