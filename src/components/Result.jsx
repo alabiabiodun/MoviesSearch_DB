@@ -53,6 +53,13 @@ const Result = () => {
     event.preventDefault();
     setFinalSearch(searchTerm);
   }
+  
+  const onKeyPress = (event) => {
+    if (event.KeyCode === 13){
+      setFinalSearch(searchTerm);
+    }
+    
+  }
 
   //if (isLoading) return <Loading />;
   
@@ -83,7 +90,7 @@ const Result = () => {
       <div className='flex flex-wrap justify-center items-center w-full mt-3'>
         <form onSubmit={submitHandler} className='flex flex-wrap justify-center items-center w-4/5'>
           <div className='flex justify-left items-center w-3/5 h-1 p-7 border rounded-full hover:shadow-lg'>
-            <input value = {searchTerm} type='text' onChange={input} placeholder='Enter Search Term'
+            <input value = {searchTerm} type='text' onChange={input} onKeyDown={onKeyPress} placeholder='Enter Search Term'
             className='w-full h-0.5 outline-none p-6 text-black' 
             />
             {
